@@ -1,0 +1,85 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{宋锐}
+
+\basicInfo{
+  \email{Songrui625@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 13471589609} \textperiodcentered\ 
+  \github[Jerry Song]{https://github.com/Songrui625}}
+  
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{合肥工业大学}, 安徽, 合肥}{2018 -- 至今}
+\begin{itemize}
+    \item 计算机科学与技术, 计算机与信息学院, 2022年毕业
+    \item GPA: 3.32/4.00  (专业前30％)
+    \item 荣誉奖项：数学竞赛校一等奖（2019）、机器人足球比赛校区三等奖（2020）、三等奖学金（2021）
+\end{itemize}
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{北京平凯星辰科技发展有限公司(PingCAP Inc.)} }{2021年11月 -- 2022年1月}
+TinyKV训练营, Golang, 应公司要求暂不开源
+\begin{itemize}
+  \item 实现了一个垂直扩展、高可用的multi-raft分布式KV存储系统
+  \item 实现了负载均衡调度器，支持dynamic configuration change以及region split
+  \item 实现了MVCC多版本并发控制，基于Percolator模型,支持高性能分布式事务
+\end{itemize}
+
+\datedsubsection{\textbf{CMU教学数据库Bustub后端存储引擎研发}}{2021年3月 -- 2021年6月}
+\role{C++, 15-445课程项目}{应教授要求暂不开源}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 实现了线程安全的基于LRU缓存替换策略的缓冲池，使用延迟刷盘策略，减少了IO开销
+  \item 实现了B+树索引数据结构，使用了latch crabbing(蟹行技术)为B+树提供了并发支持
+  \item 实现了查询执行引擎, 包括顺序扫描、索引扫描、插入，联结等执行器
+  \item 实现了基于两阶段锁的并发控制协议，死锁检测和恢复，支持可重复读、提交读和未提交读的三种隔离级别的实现
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{简易用户态TCP协议栈}}{2021年1月 -- 2021年3月}
+\role{C++, CS144课程项目}{应教授要求暂不开源}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 实现了TCP流模型，字节流重组器，对网络上乱序到来的流进行去重，重组
+  \item 实现了TCP连接，包括接收方和发送方，支持滑动窗口和超时重传
+\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{编程语言}: 熟悉C++/Rust, 了解Golang/Java
+  \item \textbf{分布式系统/数据库}: 自主学习了MIT6.824、CMU15-445和PingCAP's Talent Plan相关课程，了解分布式系统/数据库的基本理论，包括但不限于Raft和Percolator等算法
+  \item \textbf{开发工具}: 熟悉Linux, 有Git团队协作工具的使用经验
+\end{itemize}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 个人兴趣: 自驱力强，学习能力强，做事认真，保持好奇
+  \item 兴趣领域: 分布式系统、数据库、操作系统、云应用等
+  \item 主修课程: 算法设计与分析、操作系统、计算机体系结构、数据库系统、编译原理、计算机网络
+  \item 语言水平: 英语CET-6
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
